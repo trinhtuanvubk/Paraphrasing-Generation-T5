@@ -1,6 +1,6 @@
 datasets
 transformers[torch]
 SentencePiece
-accelerate -U
+accelerate
 evaluate
 rouge_score
