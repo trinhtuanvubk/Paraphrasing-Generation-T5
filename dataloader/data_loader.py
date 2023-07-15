@@ -9,8 +9,8 @@ nltk.download("punkt", quiet=True)
 from .preprocess import preprocess_function
 
 def data_loader(args, tokenizer):
-    train_dataset = load_dataset(args.dataset_name, split="train").shuffle(seed=42).select(range(500000))
-    val_dataset = load_dataset(args.dataset_name, split="train").shuffle(seed=42).sellect(range(500000,550000))
+    train_dataset = load_dataset(args.dataset_name, split="train").shuffle(seed=42).select(range(50000))
+    val_dataset = load_dataset(args.dataset_name, split="train").shuffle(seed=42).select(range(50000,55000))
 
     # tokenizer = AutoTokenizer.from_pretrained(args.model_name)
 

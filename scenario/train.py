@@ -47,5 +47,6 @@ class Trainer:
 def train(args):
     trainer = Trainer(args)
     trainer.fit()
+    self.model.save_pretrained("./results")
 
 

@@ -8,7 +8,7 @@ def get_args():
     parser.add_argument('--scenario', type=str, default='train')
     parser.add_argument('--dataset_name', type=str, default="humarin/chatgpt-paraphrases", help='dataset from huggingface')
     parser.add_argument('--model_name', type=str, default="t5-small", help='Model name')
-    parser.add_argument('--num_epochs', type=int, default=40, help='Number of epochs')
+    parser.add_argument('--num_epochs', type=int, default=15, help='Number of epochs')
     parser.add_argument('--save_total_limit', type=int, default=3)
     parser.add_argument('--batch_size', type=int, default=16, help='Batch size')
     parser.add_argument('--learning_rate', type=float, default=2e-5, help='Learning rate')
