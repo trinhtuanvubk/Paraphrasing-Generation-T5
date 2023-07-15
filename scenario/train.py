@@ -2,7 +2,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq
 
 from dataloader import data_loader
-from .util import compute_metrics
+from .util import compute_metric_with_extra
 
 class Trainer: 
     def __init__(self, args):
@@ -17,6 +17,8 @@ class Trainer:
                                     label_pad_token_id=-100, 
                                     padding=args.padding
                                     )
+        
+        self.compute_metrics = compute_metric_with_extra(self.args, self.tokenizer)
 
         self.training_args = Seq2SeqTrainingArguments(
                                     output_dir=args.output_dir,
