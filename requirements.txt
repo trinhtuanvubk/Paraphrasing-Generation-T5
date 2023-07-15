@@ -1,0 +1,6 @@
+datasets
+transformers[torch]
+SentencePiece
+accelerate -U
+evaluate
+rouge_score
