@@ -1,3 +1,4 @@
+import os
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq
 
@@ -47,6 +48,7 @@ class Trainer:
 def train(args):
     trainer = Trainer(args)
     trainer.fit()
-    trainer.model.save_pretrained("./results")
+    # os.makedirs(args.checkpoints_dir, exist_ok=True)
+    # trainer.model.save_pretrained(args.checkpoints_dir)
 
 
