@@ -33,7 +33,7 @@ class Trainer:
                                     )
 
     def fit(self):
-        trainer = Seq2SeqTrainer(
+        seq2seq_trainer = Seq2SeqTrainer(
                                 model=self.model,
                                 args=self.training_args,
                                 train_dataset=self.tokenized_train,
@@ -42,11 +42,11 @@ class Trainer:
                                 data_collator=self.data_collator,
                                 compute_metrics=self.compute_metrics
                                 )
-        trainer.train()
+        seq2seq_trainer.train()
 
 def train(args):
     trainer = Trainer(args)
     trainer.fit()
-    self.model.save_pretrained("./results")
+    trainer.model.save_pretrained("./results")
 
 
