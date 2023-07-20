@@ -33,7 +33,7 @@ python3 main.py \
 --scenario infer \
 --sentence "What are the best place in Vietnam?" \
 --num_return_sequences 5 \
---max_length 100
+--max_length 256
 ```
 
 - Flag:
