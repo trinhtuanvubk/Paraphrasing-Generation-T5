@@ -1,4 +1,5 @@
 # Paraphrasing with T5
+
 This model generates and output sentence that preserves the meaning of input sentence with variations in word choise and grammar.
 
 ### Setup 
@@ -13,7 +14,6 @@ docker exec -it text-env bash
 ### Train
 
 - To train:
-
 ```
 python3 main.py \ 
 --scenario train \
@@ -24,10 +24,10 @@ python3 main.py \
 
 - Flag:
 	- `--save_total_limit`: number of times to save checkpoints.
+
 ### Inference
 
 - To infer:
-
 ```
 python3 main.py \
 --scenario infer \
