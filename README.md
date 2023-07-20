@@ -1,4 +1,5 @@
 # Paraphrasing with T5
+This model generates and output sentence that preserves the meaning of input sentence with variations in word choise and grammar.
 
 ### Setup 
 
@@ -30,7 +31,7 @@ python3 main.py \
 ```
 python3 main.py \
 --scenario infer \
---sentence "What are the best places to see in Vietnam?" \
+--sentence "What are the best place in Vietnam?" \
 --num_return_sequences 5 \
 --max_length 100
 ```
