@@ -1,6 +1,11 @@
 # Paraphrasing with T5
 
-This model generates and output sentence that preserves the meaning of input sentence with variations in word choise and grammar.
+- This model generates and output sentence that preserves the meaning of input sentence with variations in word choise and grammar.
+
+- This repo uses the dataset `humarin/chatgpt-paraphrases` from huggingface. You can use other datasets with some modification.
+
+- This repo uses model `t5-small` - small version of T5 model.
+
 
 ### Setup 
 
