@@ -22,7 +22,7 @@ def get_args():
 
 
     # Inference
-    parser.add_argument('--sentence', type=str, default="What are the best places to see in Vietnam?", help='sentence test for inference')
+    parser.add_argument('--sentence', type=str, default="i am transferring you to an agent", help='sentence test for inference')
     parser.add_argument('--num_return_sequences', type=int, default=5, help='num result paraphrasing')
     parser.add_argument('--num_beams', type=int, default=5, help='num beams')
     parser.add_argument('--max_length', type=int, default=100, help='max length of inference input')
