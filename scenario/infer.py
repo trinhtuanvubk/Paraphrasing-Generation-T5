@@ -11,11 +11,16 @@ def infer(args):
                     padding='longest',
                     max_length=args.max_length,
                     return_tensors="pt").to(args.device)
+    # print(model.generate.__dict__)
     translated = model.generate(**batch,
                     max_length=args.max_length,
                     num_beams=args.num_beams,
                     num_return_sequences=args.num_return_sequences,
-                    temperature=1.5)
+                    temperature=1.5,
+                    do_sample=True,
+                    top_k=10)
+    import inspect
+    print(inspect.signature(model.generate))
     tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
     print(tgt_text)
     return tgt_text
